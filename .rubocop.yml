@@ -1,0 +1,6 @@
+AllCops:
+  Exclude:
+    - build/
+
+Documentation:
+  Enabled: false
