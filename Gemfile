@@ -9,7 +9,8 @@ end
 
 gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer', '~> 2.7'
-gem 'middleman-deploy', :github => 'middleman-contrib/middleman-deploy'
+gem 'middleman-deploy', github: 'middleman-contrib/middleman-deploy'
+gem 'middleman-livereload'
 gem 'rubocop'
 gem 'tzinfo-data', platforms: %i[mswin mingw jruby]
 gem 'wdm', '~> 0.1', platforms: %i[mswin mingw]
