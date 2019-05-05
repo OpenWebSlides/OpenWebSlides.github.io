@@ -17,15 +17,13 @@
     <%= javascript_include_tag "site" %>
   </head>
   <body>
-    <div class="c-container">
-      <%= partial "partials/navigation" %>
+    <%= partial "partials/navigation" %>
 
-      <%= yield %>
+    <%= yield %>
 
-      <div class="main row">
-        <div class="col-md-6 col-md-offset-3">
-          <%= yield_content :main %>
-        </div>
+    <div class="container">
+      <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 p-y-2">
+        <%= yield_content :main %>
       </div>
     </div>
   </body>
