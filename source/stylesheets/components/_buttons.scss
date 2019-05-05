@@ -8,18 +8,26 @@
   font-size: $small-font-size;
 
   &--primary {
-    background-color: $pink;
+    background-color: $button-primary-color;
 
     &:hover {
-      color: lighten($pink, 40%);
+      color: lighten($button-primary-color, 40%);
     }
   }
 
   &--secondary {
-    background-color: $purple;
+    background-color: $button-secondary-color;
 
     &:hover {
-      color: lighten($purple, 40%);
+      color: lighten($button-secondary-color, 40%);
+    }
+  }
+
+  &--link{
+    background-color: transparent;
+
+    &:hover {
+      color: darken(white, 10%);
     }
   }
 }

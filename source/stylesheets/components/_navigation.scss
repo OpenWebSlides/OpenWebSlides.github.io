@@ -1,23 +1,5 @@
-.c-navigation {
-  background-color: $pink;
-  font-weight: bold;
-  overflow-x: auto;
-  padding: 1rem;
+.navigation {
+  background-color: $base-hero-color;
 
-  a {
-    color: white;
-
-    &:hover {
-      opacity: .95;
-    }
-  }
-}
-
-.c-navigation__name {
-  font-weight: bold;
-  margin-right: 1rem;
-}
-
-.c-navigation__link {
-  margin-left: 1rem;
+  padding: $small-spacing;
 }

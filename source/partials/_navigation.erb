@@ -1,7 +1,10 @@
-<nav class="c-navigation u-flex u-flex-align-items-center u-flex-justify-space-between">
-  <%= link_to 'Open Webslides', '/', class: 'c_navigation__site-name' %>
+<nav class="navigation row">
+  <div class="col-xs-2">
+    <%= link_to 'Open Webslides', '/', class: 'button button--link'  %>
+  </div>
 
-  <div class="u-flex u-flex-nowrap">
-    <%= link_to 'Concept', '/concept', class: 'c_navigation__link' %>
+  <div class="col-xs-10 text-right">
+    <%= link_to 'Concept', '/concept', class: 'button button--link' %>
+    <%= link_to 'Team', '/team', class: 'button button--link' %>
   </div>
 </nav>
