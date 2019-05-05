@@ -16,6 +16,7 @@ h6 {
   font-weight: normal;
   line-height: $header-line-height;
   margin-bottom: 0.3em;
+  margin-top: 1.5em;
 }
 
 h1 { font-size: $h1-font-size; }
@@ -45,6 +46,11 @@ a {
     color: $hover-link-color;
     outline: none;
   }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+  color: $pink;
 }
 
 ::selection {

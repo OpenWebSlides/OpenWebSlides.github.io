@@ -9,6 +9,9 @@
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans|Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+
 
     <%= stylesheet_link_tag "site" %>
     <%= javascript_include_tag "site" %>
@@ -18,6 +21,12 @@
       <%= partial "partials/navigation" %>
 
       <%= yield %>
+
+      <div class="main row">
+        <div class="col-md-6 col-md-offset-3">
+          <%= yield_content :main %>
+        </div>
+      </div>
     </div>
   </body>
 </html>

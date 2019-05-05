@@ -1,0 +1,24 @@
+.features {
+  text-align: center;
+
+  &__feature {
+    padding: $large-spacing $small-spacing;
+  }
+
+  &__icon {
+    display: block;
+    font-size: 4em;
+    color: $purple;
+  }
+
+  &__title {
+    font-weight: $font-weight-bold;
+    margin-top: $large-spacing;
+    margin-bottom: $small-spacing;
+  }
+
+  &__text {
+    font-size: $xsmall-font-size;
+    margin: 0;
+  }
+}

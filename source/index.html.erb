@@ -3,3 +3,95 @@ title: Open Webslides
 ---
 
 <%= partial 'partials/hero' %>
+
+<% content_for :main do %>
+  <h2 id="learn-more">What if course material could...</h2>
+  <ul>
+    <li>be <strong>co-created</strong> by teachers, students and professionals?</li>
+    <li>make full use of <strong>interactive</strong> web tools?</li>
+    <li><strong>transcend</strong> courses and span multiple subjects?</li>
+    <li>promote a <strong>personal learning</strong> approach?</li>
+    <li>be <strong>shared</strong> with the educational community?</li>
+  </ul>
+
+  <p>
+    Open Webslides provides a platform to create course material that promotes co-creation and makes full use of modern web technologies to promote an (inter)active and accessible learning environment.
+  </p>
+
+  <h2>Course material is in dire need of modernization</h2>
+
+  <div class="features row">
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-road features__icon"></i>
+      <p class="features__title">One-way street</p>
+      <p class="features__text">
+        Education is still too often a one-way street, where students are expected to simply digest the material with little to no activity on their part
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-comments features__icon"></i>
+      <p class="features__title">Feedback process</p>
+      <p class="features__text">
+        Welcoming and processing feedback from students or colleagues is not a streamlined, elegant process but can instead be a time-consuming chaos
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-film features__icon"></i>
+      <p class="features__title">Media integration</p>
+      <p class="features__text">
+        Embedding media or flipped classroom tools is either impossible or not as straightforward as it should be
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-lock features__icon"></i>
+      <p class="features__title">Locked down</p>
+      <p class="features__text">
+        Learning material is often reliant on specific versions of closed software packages unavailable on older machines and mobile devices
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-book features__icon"></i>
+      <p class="features__title">Course context</p>
+      <p class="features__text">
+        Placing one subject's narrative in a bigger picture by linking to other courses is difficult at best due to technological constraints
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-university features__icon"></i>
+      <p class="features__title">Community</p>
+      <p class="features__text">
+        Ideas for better learning material are not always shared or implemented on a large enough scale that could benefit the educational community
+      </p>
+    </div>
+  </div>
+
+  <h2>The Open Webslides revolution</h2>
+
+  <div class="features row">
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-desktop features__icon"></i>
+      <p class="features__title">Online platform</p>
+      <p class="features__text">
+        A user-friendly and accessible platform for co-creation of course material, allowing the teachers and students to participate in the creation of educational content
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-piggy-bank features__icon"></i>
+      <p class="features__title">Open and free</p>
+      <p class="features__text">
+        Powered by open source technology, Open Webslides is completely free to use and adapt to your needs
+      </p>
+    </div>
+    <div class="col-xs-4 features__feature">
+      <i class="fas fa-globe-europe features__icon"></i>
+      <p class="features__title">Share and collaborate</p>
+      <p class="features__text">
+        By using linked courses and publications, Open Webslides promotes multiperspectivism and a broader narrative
+      </p>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <%= link_to 'Learn more about the mindset', '/concept.html', class: 'button button--primary' %>
+  </div>
+<% end %>
