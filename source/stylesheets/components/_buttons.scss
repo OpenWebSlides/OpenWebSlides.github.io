@@ -1,0 +1,25 @@
+.button {
+  display: inline-block;
+  padding: 1.5 * $small-spacing 1.5 * $base-spacing;
+
+  text-transform: uppercase;
+  color: $button-font-color;
+  font-weight: $font-weight-bold;
+  font-size: $small-font-size;
+
+  &--primary {
+    background-color: $pink;
+
+    &:hover {
+      color: lighten($pink, 40%);
+    }
+  }
+
+  &--secondary {
+    background-color: $purple;
+
+    &:hover {
+      color: lighten($purple, 40%);
+    }
+  }
+}
