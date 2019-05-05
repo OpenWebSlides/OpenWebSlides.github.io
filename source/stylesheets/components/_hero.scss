@@ -1,0 +1,26 @@
+.hero {
+  background: $base-hero-color;
+  padding: $xlarge-spacing $base-spacing;
+
+  &__logo img { width: 15em; }
+
+  &__headline {
+    color: $hero-font-color;
+    font-size: $base-font-size * 2.2;
+    font-weight: $font-weight-black;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+  }
+
+  &__description {
+    color: white;
+    font-size: $base-font-size;
+    display: inline-block;
+    line-height: 1.4;
+    margin: 0 0 4em;
+
+    &:not(:last-child) {
+      margin-right: 1.5em;
+    }
+  }
+}
