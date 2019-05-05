@@ -51,7 +51,7 @@ $hero-font-color: lighten($base-hero-color, 40%);
 $button-font-color: white;
 
 // Link Colors
-$base-link-color: $secondary-accent-color;
+$base-link-color: lighten($secondary-accent-color, 10%);
 $hover-link-color: darken($base-link-color, 15%);
 $base-button-color: $base-link-color;
 $hover-button-color: $hover-link-color;

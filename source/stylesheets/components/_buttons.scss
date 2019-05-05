@@ -11,7 +11,7 @@
     background-color: $button-primary-color;
 
     &:hover {
-      color: lighten($button-primary-color, 40%);
+      color: lighten($button-primary-color, 60%);
     }
   }
 
@@ -19,7 +19,7 @@
     background-color: $button-secondary-color;
 
     &:hover {
-      color: lighten($button-secondary-color, 40%);
+      color: lighten($button-secondary-color, 60%);
     }
   }
 
