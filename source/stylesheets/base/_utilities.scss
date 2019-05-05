@@ -1,3 +1,17 @@
+// Text alignment
 .text-left { text-align: left; }
 .text-center { text-align: center; }
 .text-right { text-align: right; }
+
+// Spacing
+@each $space in (.5 1 2 3 4 5 6 7 8) {
+  @each $side in (top, bottom, left, right) {
+    .m-#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space * $base-spacing} !important;
+    }
+
+    .p-#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space * $base-spacing}px !important;
+    }
+  }
+}
