@@ -6,3 +6,22 @@ ul {
     margin: $small-spacing 0;
   }
 }
+
+blockquote {
+  position: relative;
+
+  margin: 0;
+  padding: $small-spacing $large-spacing;
+
+  font-style: italic;
+  color: $purple;
+
+  &::before{
+    content: '\201C';
+    color: $purple;
+    font-size: 3em;
+    position: absolute;
+    left: 7px;
+    top:-12px;
+  }
+}
