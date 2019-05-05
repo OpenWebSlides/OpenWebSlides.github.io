@@ -11,7 +11,9 @@
   &--primary {
     background-color: $button-primary-color;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: lighten($button-primary-color, 60%);
     }
   }
@@ -19,15 +21,44 @@
   &--secondary {
     background-color: $button-secondary-color;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
       color: lighten($button-secondary-color, 60%);
     }
   }
 
-  &--link{
+  &--link {
     background-color: transparent;
 
-    &:hover {
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken(white, 10%);
+    }
+  }
+
+  &--outline {
+    border-radius: $border-radius;
+    border: 1px solid $button-outline-color;
+
+    color: $button-outline-color;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: darken($button-outline-color, 10%);
+    }
+  }
+
+  &--inverted {
+    border-radius: $border-radius;
+
+    border: 1px solid $button-inverted-color;
+
+    &:hover,
+    &:active,
+    &:focus {
       color: darken(white, 10%);
     }
   }

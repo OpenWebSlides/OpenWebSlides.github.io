@@ -24,6 +24,7 @@ $base-line-height: 1.5;
 $header-line-height: 1.25;
 
 // Other Sizes
+$border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
 $small-spacing: $base-spacing / 2;
 $large-spacing: $base-spacing * 2;
@@ -60,3 +61,5 @@ $hover-button-color: $hover-link-color;
 $button-primary-color: $pink;
 $button-secondary-color: $purple;
 $button-link-color: transparent;
+$button-outline-color: $pink;
+$button-inverted-color: white;
