@@ -1,7 +1,26 @@
+// Breakpoints
+$breakpoints: (
+  '': '',
+  'xs': 30em,
+  'sm': 48em,
+  'md': 64em,
+  'lg': 75em,
+);
+
 // Text alignment
-.text-left { text-align: left; }
-.text-center { text-align: center; }
-.text-right { text-align: right; }
+@each $alignment in (left center right) {
+  @each $breakName, $breakValue in $breakpoints {
+    $selector: if($breakName == '', '.text-#{$alignment}', '.text-#{$alignment}-#{$breakName}');
+
+    @if $breakName == '' {
+      #{$selector} { text-align: $alignment; }
+    } @else {
+      @media only screen and (max-width: $breakValue) {
+        #{$selector} { text-align: $alignment; }
+      }
+    }
+  }
+}
 
 // Spacing
 @each $space in (.5 1 2 3 4 5 6 7 8) {
@@ -12,6 +31,62 @@
 
     .p-#{str-slice($side, 0, 1)}-#{$space} {
       padding-#{$side}: #{$space * $base-spacing}px !important;
+    }
+  }
+
+  .m-a-#{$space} {
+    margin: #{$space * $base-spacing} !important;
+  }
+
+  .p-a-#{$space} {
+    padding: #{$space * $base-spacing} !important;
+  }
+
+  .m-x-#{$space} {
+    margin-left: #{$space * $base-spacing} !important;
+    margin-right: #{$space * $base-spacing} !important;
+  }
+
+  .p-x-#{$space} {
+    padding-left: #{$space * $base-spacing} !important;
+    padding-right: #{$space * $base-spacing} !important;
+  }
+
+  .m-y-#{$space} {
+    margin-top: #{$space * $base-spacing} !important;
+    margin-bottom: #{$space * $base-spacing} !important;
+  }
+
+  .p-y-#{$space} {
+    padding-top: #{$space * $base-spacing} !important;
+    padding-bottom: #{$space * $base-spacing} !important;
+  }
+}
+
+// Size
+@each $breakName, $breakValue in $breakpoints {
+  $selector: if($breakName == '', '.full-width', '.full-width-#{$breakName}');
+
+  @if $breakName == '' {
+    #{$selector} { width: 100%; }
+  } @else {
+    @media only screen and (min-width: $breakValue) {
+      #{$selector} { width: 100%; }
+    }
+  }
+}
+
+// Display
+@each $display in (inline block inline-block) {
+  @each $breakName, $breakValue in $breakpoints {
+    $selector: if($breakName == '', '.display-#{$display}', '.display-#{$display}-#{$breakName}');
+
+    @if $breakName == '' {
+      #{$selector} { display: $display; }
+    } @else {
+      @media only screen and (min-width: $breakValue) {
+        #{$selector} { display: $display; }
+      }
     }
   }
 }
