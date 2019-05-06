@@ -9,14 +9,30 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
-activate :deploy do |deploy|
-  deploy.deploy_method = :git
-  # Optional Settings
-  # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
-  # deploy.branch   = 'custom-branch' # default: gh-pages
-  # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
-  # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
-  deploy.build_before = true # build before deploy, default: false
+# Deploy to multiple sites
+case ENV['TARGET'].to_s.downcase
+when 'github'
+  activate :deploy do |deploy|
+    deploy.deploy_method = :git
+    # Optional Settings
+    # deploy.remote   = 'custom-remote' # remote name or git url, default: origin
+    # deploy.branch   = 'custom-branch' # default: gh-pages
+    # deploy.strategy = :submodule      # commit strategy: can be :force_push or :submodule, default: :force_push
+    # deploy.commit_message = 'custom-message'      # commit message (can be empty), default: Automated commit at `timestamp` by middleman-deploy `version`
+    deploy.build_before = true # build before deploy, default: false
+  end
+else
+  activate :deploy do |deploy|
+    deploy.deploy_method = :rsync
+    deploy.host          = 'openwebslid.es'
+    deploy.path          = '/opt/openwebslides/openwebslides/site/'
+
+    # Optional Settings
+    deploy.user          = 'openwebslides' # no default
+    # deploy.password = 'secret' # no default
+
+    deploy.build_before = true # default: false
+  end
 end
 
 # Layouts

@@ -34,3 +34,11 @@ $ middleman server
 ```
 $ middleman build
 ```
+
+## Deploy
+
+```
+$ # Deploy to Github Pages
+$ TARGET=github middleman deploy
+$ # Deploy to https://openwebslid.es/
+$ middleman deploy
