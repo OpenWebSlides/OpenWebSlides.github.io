@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.8.1",
     "flexboxgrid": "^6.3.1"
   }
 }

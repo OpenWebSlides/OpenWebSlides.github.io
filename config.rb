@@ -35,6 +35,11 @@ else
   end
 end
 
+# Add external assets here
+Dir['./node_modules/@fortawesome/fontawesome-free/webfonts/*'].each do |file|
+  import_file file, File.join('webfonts', File.basename(file))
+end
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
