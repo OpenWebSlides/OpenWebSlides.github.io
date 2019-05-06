@@ -21,6 +21,7 @@ $ rvm gemset create `cat .ruby-gemset`
 $ rvm use $(cat .ruby-version)-$(cat .ruby-gemset)
 $ gem install bundler
 $ bundle install
+$ yarn
 ```
 
 ## Developing
