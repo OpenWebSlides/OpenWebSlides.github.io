@@ -5,9 +5,12 @@
 
 activate :livereload
 activate :directory_indexes
+activate :relative_assets
 activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
+
+set :relative_links, true
 
 # Deploy to multiple sites
 case ENV['TARGET'].to_s.downcase
